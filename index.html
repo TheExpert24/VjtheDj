@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vj the Dj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Vj the Dj</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for songs, artists, or albums...">
+            <button id="search-button">Search</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <div class="player-container">
+        <div class="progress-container">
+            <div id="current-time">0:00</div>
+            <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
+            <div id="duration">0:00</div>
+        </div>
+        <div class="now-playing">
+            <div class="song-info-small">
+                <img id="current-album-art" src="" alt="Album Art" style="display: none;">
+                <div>
+                    <div id="current-song-title">No song playing</div>
+                    <div id="current-artist">Select a song to play</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button id="play-pause-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button id="repeat-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="youtube-player"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
