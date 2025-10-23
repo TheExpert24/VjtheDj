@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!query) return;
 
         try {
-            const response = await fetch(`http://localhost:3000/search?q=${encodeURIComponent(query)}`);
+            const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
             const data = await response.json();
 
             currentSearchResults = data.results || [];
