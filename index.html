@@ -8,12 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="title">Vj the Dj</h1>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search for songs, artists, or albums...">
-            <button id="search-button">Search</button>
-        </div>
-        <div id="results"></div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 id="title">Vj the Dj</h1>
+                <button id="add-playlist-btn" title="Create Playlist">+</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for songs, artists, or albums...">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="results"></div>
+            <div class="playlists-bottom" id="playlists-bottom">
+                <h3>Your Playlists</h3>
+                <div id="playlists-list"></div>
+            </div>
     </div>
     <div class="player-container">
         <div class="progress-container">
@@ -30,9 +37,21 @@
                 </div>
             </div>
             <div class="player-controls">
+                <button id="prev-btn" title="Previous Song">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19V5l8.5 7z"/>
+                        <rect x="2" y="5" width="2" height="14" rx="1"/>
+                    </svg>
+                </button>
                 <button id="play-pause-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button id="next-btn" title="Next Song">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 5v14l-8.5-7z"/>
+                        <rect x="20" y="5" width="2" height="14" rx="1"/>
                     </svg>
                 </button>
                 <button id="repeat-btn">
